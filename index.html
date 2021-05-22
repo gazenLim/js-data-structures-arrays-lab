@@ -4,9 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="node_modules/mocha/mocha.css">
   <title>JavaScript Lab</title>
 </head>
 <body>
-  hello
+  <!-- <div> for Mocha to display test results. -->
+  <div id="mocha"></div>
+
+  <!-- Include Mocha and set it up for BDD-style testing. -->
+  <script src="node_modules/mocha/mocha.js"></script>
+  <script>mocha.setup('bdd');</script>
+
+  <!-- Include Chai as the matcher library. -->
+  <script src="node_modules/chai/chai.js"></script>
+
+  <!-- Include the student's JavaScript file. -->
+  <script src="index.js"></script>
+
+  <!-- Include the JavaScript file containing the tests. -->
+  <script src="test/indexTest.js"></script>
+
+  <!-- Include Flatiron School's test runner to push results to Learn. -->
+  <script src="node_modules/learn-browser/learnBrowser.min.js"></script>
 </body>
 </html>
